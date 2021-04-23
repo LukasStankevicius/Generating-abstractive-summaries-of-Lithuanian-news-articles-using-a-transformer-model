@@ -1,5 +1,6 @@
 # Generating abstractive summaries of Lithuanian news articles using a transformer model
-This repository contains the code used in this work.
+This repository contains the [code](Supplementary_code.ipynb) used in this work.
+
 
 # Simple usage
 ```python
