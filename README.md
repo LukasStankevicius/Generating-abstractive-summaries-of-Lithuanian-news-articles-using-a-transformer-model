@@ -61,3 +61,8 @@ Output from above would be:
 ```python
 "Lietuvos krepšinio federacijos (LKF) prezidento Arvydo Sabonio rezultatyvumo vidurkis yra aukščiausias tarp visų Sovietų Sąjungos rinktinėje atstovavusių žaidėjų, skaičiuojant tuos, kurie sužaidė bent po 50 oficialių rungtynių."
 ```
+If you do a lot of compute you can take advantage of GPU. Before line with `model.generate` additionally insert these lines:
+```python
+input_dict = {key:value.to("cuda:0") for key, value in input_dict.items()}
+model = model.to("cuda:0")
+```
